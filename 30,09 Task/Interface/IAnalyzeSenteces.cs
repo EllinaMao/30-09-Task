@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _30_09_Task
+namespace _30_09_Task.Interface
 {
-
-    public interface IAnalyzeQuestions
+    public interface IAnalyzeSentences
     {
-        int GetQuestionCount(string text);
+        int GetSentenceCount(string text);
     }
 
 }

@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _30_09_Task
+namespace _30_09_Task.Interface
 {
-    public interface IAnalyzeSentences
+    public interface IAnalyzeExclamations
     {
-        int GetSentenceCount(string text);
+        int GetExclamationCount(string text);
     }
 
 }

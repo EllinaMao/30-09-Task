@@ -4,14 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _30_09_Task
+namespace _30_09_Task.Interface
 {
 
-    public interface IAnalyzeSymbols
+    public interface IAnalyzeWords
     {
-        int GetSymbolsCount(string text);
+        int GetWordCount(string text);
     }
-
-
 
 }
