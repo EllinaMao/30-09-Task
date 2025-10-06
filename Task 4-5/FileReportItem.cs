@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text.Json.Serialization;
 
 namespace Task_4_5
 {
@@ -14,9 +10,13 @@ namespace Task_4_5
     }
     public class FileReportItem
     {
-        public string Name { get; set; }
-        public string SourcePath { get; set; }
-        public string DestinationPath { get; set; }
+        [JsonPropertyName("Имя")]
+        public string Name { get; set; } = string.Empty;
+        [JsonPropertyName("Источник")]
+        public string SourcePath { get; set; } = string.Empty;
+        [JsonPropertyName("Конечная папка")]
+        public string DestinationPath { get; set; } = string.Empty;
+        [JsonPropertyName("Тип")]
         public string Type
         {
             get
@@ -25,7 +25,8 @@ namespace Task_4_5
             }
 
         }
+        [JsonPropertyName("Статус")]
         public FileStatus Status { get; set; }
-    
+
     }
 }

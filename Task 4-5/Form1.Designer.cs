@@ -42,6 +42,11 @@
             sourceBtn = new Button();
             groupBox1 = new GroupBox();
             dataGridView1 = new DataGridView();
+            FileNameClmn = new DataGridViewTextBoxColumn();
+            FileSourcePathClmn = new DataGridViewTextBoxColumn();
+            FileDestinationClmn = new DataGridViewTextBoxColumn();
+            FileTypeClmn = new DataGridViewTextBoxColumn();
+            FileStatusClmn = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -53,23 +58,26 @@
             // panel1
             // 
             panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(0 , 412);
+            panel1.Location = new Point(0, 310);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(800 , 38);
+            panel1.Size = new Size(1148, 28);
             panel1.TabIndex = 0;
             // 
             // panel2
             // 
             panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0 , 0);
+            panel2.Location = new Point(0, 0);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(800 , 32);
+            panel2.Size = new Size(1148, 24);
             panel2.TabIndex = 1;
             // 
             // splitContainer1
             // 
             splitContainer1.Dock = DockStyle.Fill;
-            splitContainer1.Location = new Point(0 , 32);
+            splitContainer1.Location = new Point(0, 24);
+            splitContainer1.Margin = new Padding(3, 2, 3, 2);
             splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -87,8 +95,8 @@
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.Controls.Add(groupBox1);
-            splitContainer1.Size = new Size(800 , 380);
-            splitContainer1.SplitterDistance = 266;
+            splitContainer1.Size = new Size(1148, 286);
+            splitContainer1.SplitterDistance = 381;
             splitContainer1.TabIndex = 2;
             // 
             // IsShowOnScreen
@@ -96,9 +104,10 @@
             IsShowOnScreen.AutoSize = true;
             IsShowOnScreen.Checked = true;
             IsShowOnScreen.CheckState = CheckState.Checked;
-            IsShowOnScreen.Location = new Point(25 , 256);
+            IsShowOnScreen.Location = new Point(22, 192);
+            IsShowOnScreen.Margin = new Padding(3, 2, 3, 2);
             IsShowOnScreen.Name = "IsShowOnScreen";
-            IsShowOnScreen.Size = new Size(154 , 24);
+            IsShowOnScreen.Size = new Size(123, 19);
             IsShowOnScreen.TabIndex = 8;
             IsShowOnScreen.Text = "Вывести на экран";
             IsShowOnScreen.UseVisualStyleBackColor = true;
@@ -106,18 +115,20 @@
             // IsSaveinFile
             // 
             IsSaveinFile.AutoSize = true;
-            IsSaveinFile.Location = new Point(25 , 226);
+            IsSaveinFile.Location = new Point(22, 170);
+            IsSaveinFile.Margin = new Padding(3, 2, 3, 2);
             IsSaveinFile.Name = "IsSaveinFile";
-            IsSaveinFile.Size = new Size(156 , 24);
+            IsSaveinFile.Size = new Size(126, 19);
             IsSaveinFile.TabIndex = 7;
             IsSaveinFile.Text = "Сохранить в файл";
             IsSaveinFile.UseVisualStyleBackColor = true;
             // 
             // ShowReportBtn
             // 
-            ShowReportBtn.Location = new Point(25 , 307);
+            ShowReportBtn.Location = new Point(22, 230);
+            ShowReportBtn.Margin = new Padding(3, 2, 3, 2);
             ShowReportBtn.Name = "ShowReportBtn";
-            ShowReportBtn.Size = new Size(221 , 29);
+            ShowReportBtn.Size = new Size(193, 22);
             ShowReportBtn.TabIndex = 1;
             ShowReportBtn.Text = "Показать отчет";
             ShowReportBtn.UseVisualStyleBackColor = true;
@@ -125,43 +136,46 @@
             // 
             // DestinationTxtBox
             // 
-            DestinationTxtBox.Location = new Point(25 , 179);
+            DestinationTxtBox.Location = new Point(22, 134);
+            DestinationTxtBox.Margin = new Padding(3, 2, 3, 2);
             DestinationTxtBox.Name = "DestinationTxtBox";
             DestinationTxtBox.ReadOnly = true;
-            DestinationTxtBox.Size = new Size(221 , 27);
+            DestinationTxtBox.Size = new Size(194, 23);
             DestinationTxtBox.TabIndex = 6;
             // 
             // SourceTxtBox
             // 
-            SourceTxtBox.Location = new Point(25 , 63);
+            SourceTxtBox.Location = new Point(22, 47);
+            SourceTxtBox.Margin = new Padding(3, 2, 3, 2);
             SourceTxtBox.Name = "SourceTxtBox";
             SourceTxtBox.ReadOnly = true;
-            SourceTxtBox.Size = new Size(221 , 27);
+            SourceTxtBox.Size = new Size(194, 23);
             SourceTxtBox.TabIndex = 5;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(25 , 136);
+            label2.Location = new Point(22, 102);
             label2.Name = "label2";
-            label2.Size = new Size(122 , 20);
+            label2.Size = new Size(95, 15);
             label2.TabIndex = 4;
             label2.Text = "Конечная папка";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(29 , 23);
+            label1.Location = new Point(25, 17);
             label1.Name = "label1";
-            label1.Size = new Size(120 , 20);
+            label1.Size = new Size(96, 15);
             label1.TabIndex = 3;
             label1.Text = "Папка источник";
             // 
             // DestinationBtn
             // 
-            DestinationBtn.Location = new Point(148 , 132);
+            DestinationBtn.Location = new Point(130, 99);
+            DestinationBtn.Margin = new Padding(3, 2, 3, 2);
             DestinationBtn.Name = "DestinationBtn";
-            DestinationBtn.Size = new Size(94 , 29);
+            DestinationBtn.Size = new Size(82, 22);
             DestinationBtn.TabIndex = 2;
             DestinationBtn.Text = "Открыть";
             DestinationBtn.UseVisualStyleBackColor = true;
@@ -169,9 +183,10 @@
             // 
             // sourceBtn
             // 
-            sourceBtn.Location = new Point(152 , 19);
+            sourceBtn.Location = new Point(133, 14);
+            sourceBtn.Margin = new Padding(3, 2, 3, 2);
             sourceBtn.Name = "sourceBtn";
-            sourceBtn.Size = new Size(94 , 29);
+            sourceBtn.Size = new Size(82, 22);
             sourceBtn.TabIndex = 1;
             sourceBtn.Text = " Открыть";
             sourceBtn.UseVisualStyleBackColor = true;
@@ -181,31 +196,69 @@
             // 
             groupBox1.Controls.Add(dataGridView1);
             groupBox1.Dock = DockStyle.Fill;
-            groupBox1.Location = new Point(0 , 0);
+            groupBox1.Location = new Point(0, 0);
+            groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(530 , 380);
+            groupBox1.Padding = new Padding(3, 2, 3, 2);
+            groupBox1.Size = new Size(763, 286);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Отчет";
             // 
             // dataGridView1
             // 
+            dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { FileNameClmn, FileSourcePathClmn, FileDestinationClmn, FileTypeClmn, FileStatusClmn });
             dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(3 , 23);
+            dataGridView1.Location = new Point(3, 18);
+            dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(524 , 354);
+            dataGridView1.Size = new Size(757, 266);
             dataGridView1.TabIndex = 0;
+            // 
+            // FileNameClmn
+            // 
+            FileNameClmn.HeaderText = "Название Файла";
+            FileNameClmn.Name = "FileNameClmn";
+            FileNameClmn.ReadOnly = true;
+            // 
+            // FileSourcePathClmn
+            // 
+            FileSourcePathClmn.HeaderText = "Источник";
+            FileSourcePathClmn.Name = "FileSourcePathClmn";
+            FileSourcePathClmn.ReadOnly = true;
+            FileSourcePathClmn.Width = 200;
+            // 
+            // FileDestinationClmn
+            // 
+            FileDestinationClmn.HeaderText = "Конечный путь";
+            FileDestinationClmn.Name = "FileDestinationClmn";
+            FileDestinationClmn.ReadOnly = true;
+            FileDestinationClmn.Width = 200;
+            // 
+            // FileTypeClmn
+            // 
+            FileTypeClmn.HeaderText = "Тип файла";
+            FileTypeClmn.Name = "FileTypeClmn";
+            FileTypeClmn.ReadOnly = true;
+            // 
+            // FileStatusClmn
+            // 
+            FileStatusClmn.HeaderText = "Статус";
+            FileStatusClmn.Name = "FileStatusClmn";
+            FileStatusClmn.ReadOnly = true;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F , 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800 , 450);
+            ClientSize = new Size(1148, 338);
             Controls.Add(splitContainer1);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Form1";
             splitContainer1.Panel1.ResumeLayout(false);
@@ -234,5 +287,10 @@
         private GroupBox groupBox1;
         private CheckBox IsShowOnScreen;
         private CheckBox IsSaveinFile;
+        private DataGridViewTextBoxColumn FileNameClmn;
+        private DataGridViewTextBoxColumn FileSourcePathClmn;
+        private DataGridViewTextBoxColumn FileDestinationClmn;
+        private DataGridViewTextBoxColumn FileTypeClmn;
+        private DataGridViewTextBoxColumn FileStatusClmn;
     }
 }
